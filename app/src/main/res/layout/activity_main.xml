@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/firstname"
+                android:textColor="@color/text"/>
+            <EditText android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstnamee"
+                android:inputType="text"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/lastname"
+                android:textSize="18sp"
+                android:textColor="@color/text"/>
+            <EditText android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastname"
+                android:inputType="text" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clear"
+                android:text="@string/clear"
+                android:textColor="@color/colorAccent"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="add"
+                android:text="@string/add"
+                android:textColor="@color/colorAccent"
+                android:background="@android:color/transparent" />
+        </TableRow>
+    </TableLayout>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:longClickable="true">
+    </ListView>
+</LinearLayout>
